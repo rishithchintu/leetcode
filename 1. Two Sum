@@ -1,0 +1,7 @@
+class Solution(object):
+    def twoSum(self, nums, target):
+        test=dict()
+        for i in range(len(nums)):
+            if target-nums[i] in test.keys():
+                return [test[target-nums[i]], i]
+            test[nums[i]]=i
